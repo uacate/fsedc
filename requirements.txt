@@ -1,0 +1,16 @@
+# test, prod
+arrow
+python-dotenv
+sqlalchemy
+alembic
+lxml
+requests
+bs4
+psycopg2-binary
+# gunicorn
+
+# dev
+pytest
+pytest-cov
+pytest-sugar
+ruff
