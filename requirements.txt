@@ -4,9 +4,11 @@ python-dotenv
 sqlalchemy
 alembic
 lxml
+# logfire
 requests
 bs4
 psycopg2-binary
+pydantic
 # gunicorn
 
 # dev
