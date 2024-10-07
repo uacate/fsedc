@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'dadaforest.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "USER": "",
-        "NAME": "",
-        "PASSWORD": "",
-        "HOST": "0.0.0.0",
-        "PORT": "5432",
+        "USER": os.environ.get("DB_USER"),
+        "NAME": os.environ.get("DB_NAME"),
+        "PASSWORD": os.environ.get("DB_PASSWORD"),
+        "HOST": os.environ.get("DB_HOST"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
         "TEST": {
             "NAME": "dadaforest_test",
         },
