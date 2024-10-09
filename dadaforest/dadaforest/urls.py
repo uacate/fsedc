@@ -15,8 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.views.generic.base import RedirectView
+import config
+
 
 urlpatterns = [
+    path("", RedirectView.as_view(url="/search")),
     path('admin/', admin.site.urls),
+    path("search/", include("apps.catalog.urls")),
 ]
+
+admin.site.site_header = config.ADMIN_SITE_SITE_HEADER
+admin.site.site_title = config.ADMIN_SITE_SITE_TITLE
+admin.site.index_title = config.ADMIN_SITE_INDEX_TITLE
+admin.site.index_template = "admin/index.html"
