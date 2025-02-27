@@ -4,7 +4,7 @@ from annotated_types import Len
 
 from pydantic import BaseModel, HttpUrl
 
-class DCAT(BaseModel):
 
+class DCAT(BaseModel):
     conformsTo: HttpUrl
     dataset: Annotated[list[dict], Len(min_length=1)]

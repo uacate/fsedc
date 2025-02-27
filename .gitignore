@@ -5,3 +5,6 @@ tests/__pycache__/
 __pycache__/
 
 .coverage
+tmp/
+scratch/
+*scratch*
