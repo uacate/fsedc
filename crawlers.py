@@ -12,6 +12,7 @@ def strip_html_tags(text):
     stripped_text = stripped_text.replace("\n", " ")
     return stripped_text
 
+
 def fsgeodata():
     base_url = "https://data.fs.usda.gov/geodata/edw/datasets.php"
     metadata_urls = []
